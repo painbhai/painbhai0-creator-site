@@ -1,0 +1,9 @@
+export default function Home() {
+  return (
+    <main style={{ textAlign: 'center', padding: '4rem' }}>
+      <h1>🎮 Welcome to PainBhai0 Creator Hub</h1>
+      <p>Gaming | Desi | YouTube | AI</p>
+      <p><a href="https://youtube.com/@PainBhai0" target="_blank">YouTube Channel</a></p>
+    </main>
+  );
+}
