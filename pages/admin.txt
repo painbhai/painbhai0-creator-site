@@ -1,0 +1,32 @@
+import { useSession } from "next-auth/react";
+import Link from "next/link";
+
+export default function AdminPanel() {
+  const { data: session } = useSession();
+
+  if (!session || session.user.email !== "dharmpal444oo@gmail.com") {
+    return (
+      <div style={{ padding: "2rem" }}>
+        <h1>Access Denied ❌</h1>
+        <p>You are not the admin.</p>
+        <Link href="/">Go Back</Link>
+      </div>
+    );
+  }
+
+  return (
+    <div style={{ padding: "2rem" }}>
+      <h1>🛠️ Admin Panel</h1>
+      <p>Welcome, Admin <strong>{session.user.name}</strong></p>
+
+      <ul>
+        <li>➕ Add YouTube Video</li>
+        <li>📦 Manage Support</li>
+        <li>🧠 AI Tool Settings</li>
+      </ul>
+
+      <br />
+      <Link href="/dashboard">Back to Dashboard</Link>
+    </div>
+  );
+}
