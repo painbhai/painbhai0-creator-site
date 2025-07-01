@@ -4,63 +4,45 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PainBhai0 Creator Hub</title>
-  <style>
-    body {
-      background: #111;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 20px;
-    }
-    a {
-      color: #0af;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    img {
-      margin-top: 20px;
-      border: 2px solid #444;
-      border-radius: 10px;
-      width: 250px;
-      height: 250px;
-    }
-    nav {
-      background: #000;
-      padding: 10px 0;
-      margin-bottom: 20px;
-    }
-    nav a {
-      margin: 0 15px;
-      color: #0af;
-    }
-    footer {
-      margin-top: 40px;
-      font-size: 0.9rem;
-      color: #888;
-    }
-  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <nav>
-    <a href="/">Home</a>
-    <a href="/login">Login</a>
-    <a href="/admin">Admin</a>
-    <a href="/ai">Ask AI</a>
-    <a href="/donate">Donate</a>
-  </nav>
+<body class="bg-black text-white font-sans">
 
-  <h1>🎮 Welcome to PainBhai0 Creator Hub</h1>
+  <header class="bg-cover bg-center p-10 text-center" style="background-image: url('https://i.imgur.com/y9gK2Di.jpg');">
+    <h1 class="text-4xl font-bold">🎮 PainBhai0 Creator Hub</h1>
+    <p class="text-lg mt-2">Gaming | Streaming | AI | UPI Support</p>
+  </header>
 
-  <p>YouTube: <a href="https://youtube.com/@PainBhai0" target="_blank">@PainBhai0</a></p>
-  <p>Instagram: <a href="https://www.instagram.com/painbhai0" target="_blank">@painbhai0</a></p>
-  <p>Discord: <a href="https://discord.gg/F6k6vuHnA2" target="_blank">Join Discord</a></p>
+  <main class="max-w-3xl mx-auto p-6 space-y-10">
+    <section>
+      <h2 class="text-2xl font-semibold mb-2">📺 Latest YouTube Video</h2>
+      <iframe class="rounded-lg w-full h-64" src="https://www.youtube.com/embed/vd8KnE-fj5g" allowfullscreen></iframe>
+    </section>
 
-  <h2>💸 Support via UPI</h2>
-  <p><strong>UPI ID:</strong> painbhai0@upi</p>
-  <img src="upi_qr_resized.jpg" alt="UPI QR Code">
+    <section>
+      <h2 class="text-2xl font-semibold mb-2">🔐 Login</h2>
+      <button class="bg-blue-500 px-4 py-2 rounded hover:bg-blue-600">Login with Google</button>
+    </section>
 
-  <footer>
-    &copy; 2025 PainBhai0 • Made for Gamers, by a Gamer 💥
+    <section>
+      <h2 class="text-2xl font-semibold mb-2">💸 Donate</h2>
+      <p>Donate via UPI: <strong>painbhai0@upi</strong></p>
+      <img src="https://via.placeholder.com/200x200.png?text=UPI+QR" alt="QR Code" class="mt-2 mx-auto rounded">
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold mb-2">📲 Social Links</h2>
+      <div class="flex gap-4 flex-wrap">
+        <a href="https://youtube.com/@PainBhai0" target="_blank" class="text-blue-400 underline">YouTube</a>
+        <a href="https://discord.gg/F6k6vuHnA2" target="_blank" class="text-blue-400 underline">Discord</a>
+        <a href="https://instagram.com/painbhai0" target="_blank" class="text-pink-400 underline">Instagram</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-center text-sm text-gray-400 py-4">
+    &copy; 2025 PainBhai0 • Built with ❤️ for gamers
   </footer>
+
 </body>
 </html>
