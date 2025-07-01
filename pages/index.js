@@ -1,27 +1,21 @@
-import { signIn, signOut, useSession } from "next-auth/react";
+header style="text-align:center; padding:4rem 2rem; background:#0f0f0f; color:white;">
+  <h1 style="font-size:3rem;">🎮 Welcome to <span style="color:#0af;">PainBhai0 Creator Hub</span></h1>
+  <p style="font-size:1.2rem; margin-top:1rem;">Gaming | Streaming | Donate | AI | Secure</p>
 
-export default function Home() {
-  const { data: session } = useSession();
+  <div style="margin:2rem 0;">
+    <a href="/api/auth/signin" style="padding:12px 24px; background:#0af; color:white; border:none; border-radius:6px; font-size:1rem; text-decoration:none;">
+      🔐 Login with Google
+    </a>
+  </div>
 
-  return (
-    <main style={{ textAlign: "center", padding: "40px" }}>
-      <h1>🎮 Welcome to PainBhai0 Creator Hub</h1>
-      <p>Gaming | Streaming | Donate | AI | Secure</p>
+  <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-bottom:1rem;">
+    <a href="https://youtube.com/@PainBhai0" target="_blank" style="color:#fff; text-decoration:none;">📺 YouTube</a>
+    <a href="https://discord.gg/F6k6vuHnA2" target="_blank" style="color:#fff; text-decoration:none;">💬 Discord</a>
+    <a href="https://www.instagram.com/painbhai0" target="_blank" style="color:#fff; text-decoration:none;">📸 Instagram</a>
+  </div>
 
-      {!session ? (
-        <button onClick={() => signIn("google")}>Login with Google</button>
-      ) : (
-        <>
-          <p>Welcome, {session.user.name}</p>
-          <button onClick={signOut}>Logout</button>
-        </>
-      )}
-
-      <hr />
-      <a href="https://youtube.com/@PainBhai0" target="_blank">📺 YouTube</a> |
-      <a href="https://discord.gg/F6k6vuHnA2" target="_blank"> Discord</a> |
-      <a href="https://instagram.com/painbhai0" target="_blank"> Instagram</a>
-      <p>Donate via UPI: <strong>painbhai0@upi</strong></p>
+  <p style="margin-top:1rem; font-weight:bold; font-size:1.1rem;">💸 Donate via UPI: <span style="color:#0af;">painbhai0@upi</span></p>
+</header>ong></p>
     </main>
   );
 }
