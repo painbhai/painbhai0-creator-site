@@ -19,6 +19,7 @@ export default function Home() {
         )}
       </div>
 
+      <p><a href="/dashboard">📂 Go to Creator Dashboard</a></p>
       <p>📺 <a href="https://youtube.com/@PainBhai0" target="_blank">YouTube</a></p>
       <p>💬 <a href="https://discord.gg/F6k6vuHnA2" target="_blank">Discord</a></p>
       <p>📸 <a href="https://www.instagram.com/painbhai0" target="_blank">Instagram</a></p>

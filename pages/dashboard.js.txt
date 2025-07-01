@@ -1,0 +1,32 @@
+import { useSession, signOut } from "next-auth/react";
+import Link from "next/link";
+
+export default function Dashboard() {
+  const { data: session, status } = useSession();
+
+  if (status === "loading") return <p>Loading...</p>;
+  if (!session) return <p>Please <Link href="/">login</Link> first.</p>;
+
+  return (
+    <div style={{ padding: "2rem", fontFamily: "sans-serif" }}>
+      <h1>🎮 Creator Dashboard</h1>
+      <p>Welcome, <strong>{session.user.name}</strong></p>
+      <img src={session.user.image} width="80" style={{ borderRadius: "50%" }} />
+      <p>Email: {session.user.email}</p>
+
+      <h2>📊 Channel Stats (Demo)</h2>
+      <ul>
+        <li>Subscribers: <strong>14.2k</strong></li>
+        <li>Views: <strong>1.5M+</strong></li>
+        <li>Videos: <strong>120+</strong></li>
+      </ul>
+
+      <h2>💸 Donation Support</h2>
+      <p>UPI ID: <strong>painbhai0@upi</strong></p>
+      <img src="https://via.placeholder.com/250x250.png?text=Pay+UPI" alt="UPI QR" />
+
+      <br /><br />
+      <button onClick={() => signOut()}>Logout</button>
+    </div>
+  );
+}
